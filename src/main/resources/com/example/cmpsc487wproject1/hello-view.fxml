@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="539.0" maxWidth="700.0" minHeight="504.0" minWidth="700.0" prefHeight="504.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cmpsc487wproject1.HelloController">
+   <children>
+      <Line endX="-100.0" endY="470.0" layoutX="359.0" layoutY="17.0" startX="-100.0" />
+      <TableView fx:id="userTable" layoutX="267.0" layoutY="52.0" prefHeight="193.0" prefWidth="420.0" visible="false">
+        <columns>
+          <TableColumn fx:id="usersID" prefWidth="116.0" text="ID" />
+          <TableColumn fx:id="usersName" prefWidth="128.0" text="Name" />
+            <TableColumn fx:id="usersTitle" prefWidth="133.0" text="Title" />
+            <TableColumn fx:id="usersAccess" prefWidth="42.0" text="Access" />
+        </columns>
+      </TableView>
+      <Button fx:id="exitButton" layoutX="15.0" layoutY="464.0" mnemonicParsing="false" onAction="#onExitButtonClick" prefHeight="25.0" prefWidth="232.0" text="Exit" />
+      <Button layoutX="564.0" layoutY="14.0" mnemonicParsing="false" onAction="#onAdminButtonClick" prefHeight="25.0" prefWidth="123.0" text="Admin Access" />
+      <TextField fx:id="adminIdBox" layoutX="268.0" layoutY="14.0" prefHeight="25.0" prefWidth="291.0" promptText="Enter admin ID..." />
+      <TableView fx:id="historyTable" layoutX="267.0" layoutY="260.0" prefHeight="193.0" prefWidth="420.0" visible="false">
+        <columns>
+          <TableColumn fx:id="historyID" prefWidth="140.0" text="ID" />
+            <TableColumn fx:id="historyTime" prefWidth="151.0" text="Time Swiped" />
+            <TableColumn fx:id="historyDate" prefWidth="128.0" text="Date" />
+        </columns>
+      </TableView>
+      <TextField fx:id="swipeBox" layoutX="19.0" layoutY="46.0" prefHeight="25.0" prefWidth="232.0" promptText="Enter 9 digit ID..." />
+      <Button layoutX="18.0" layoutY="79.0" mnemonicParsing="false" onAction="#onSwipeButtonClick" text="Swipe" />
+      <Button fx:id="filterButton" layoutX="574.0" layoutY="464.0" mnemonicParsing="false" onAction="#onFilterButtonClick" prefHeight="25.0" prefWidth="52.0" text="Filter" visible="false" />
+      <Label layoutX="18.0" layoutY="18.0" prefHeight="17.0" prefWidth="232.0" text="Welcome! Enter ID and swipe to continue." />
+      <TextField fx:id="idFilter" layoutX="268.0" layoutY="464.0" prefHeight="25.0" prefWidth="96.0" promptText="ID" visible="false" />
+      <Text fx:id="swipeText" layoutX="19.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <TextField fx:id="dateFilter" layoutX="369.0" layoutY="464.0" prefHeight="25.0" prefWidth="96.0" promptText="Date" visible="false" />
+      <TextField fx:id="timeFilter" layoutX="469.0" layoutY="464.0" prefHeight="25.0" prefWidth="96.0" promptText="Time" visible="false" />
+      <Button fx:id="clearButton" layoutX="635.0" layoutY="464.0" mnemonicParsing="false" onAction="#onClearFilterButtonClick" prefHeight="25.0" prefWidth="52.0" text="Clear" visible="false" />
+   </children>
+</AnchorPane>
